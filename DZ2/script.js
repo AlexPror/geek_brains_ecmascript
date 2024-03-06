@@ -27,7 +27,9 @@ class Book {
   }
   displayInfo() {
     console.log(
-      `Book title: ${this.title}, author: ${this.author}, pages: ${this.pages}`
+      `Book title: ${this.title}, 
+    author: ${this.author}, 
+    pages: ${this.pages}`
     );
   }
 }
