@@ -75,19 +75,18 @@ manager.displayInfo();
 
 //2
 class Order {
+  products = [];
   constructor(orderNumber) {
     this.orderNumber = orderNumber;
-    this.products = [];
   }
   addProduct(product) {
     this.products.push(product);
   }
   getTotalPrice() {
-    let totalprice = 0;
-    for (const product of this.products) {
-      totalprice += product.price;
-    }
-    return totalprice;
+    return this.products.reduce(
+      (totalprice, product) => totalprice + product.price,
+      0
+    );
   }
 }
 
